@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#161616">
+  <meta name="description" content="Brasa Alta Hamburgueria — demonstração de cardápio digital com hambúrgueres, combos e personalização de pedidos.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Brasa Alta Hamburgueria — burger de verdade.">
+  <meta property="og:description" content="Explore burgers, combos e personalize seu lanche na Brasa Alta. Modelo demonstrativo desenvolvido pela Upzen.">
+  <title>Brasa Alta Hamburgueria — burger de verdade.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#cardapio">Pular para o cardápio</a>
+
+  <div class="announcement">
+    <div class="container announcement-inner">
+      <span>MODELO DEMONSTRATIVO UPZEN · CARDÁPIO FICTÍCIO</span>
+      <a href="#cardapio">VER CARDÁPIO <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a class="brand brand-image" href="#inicio" aria-label="Brasa Alta Hamburgueria — voltar ao início">
+        <span class="brand-mark logo-image-wrap" aria-hidden="true"><img src="assets/brasa-alta-logo.png" alt=""></span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+        <a class="nav-link active" href="#inicio">Início</a>
+        <a class="nav-link" href="#cardapio">Cardápio</a>
+        <a class="nav-link" href="#nossa-brasa">A casa</a>
+        <a class="nav-link" href="#como-pedir">Como pedir</a>
+        <button class="cart-button" id="cartButton" type="button" aria-haspopup="dialog" aria-controls="cartDrawer" aria-label="Abrir sacola com 0 itens">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m4 8 1.5 12h13L20 8H4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 9V6a3 3 0 0 1 6 0v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          <span class="cart-label">Minha sacola</span><span class="cart-count" id="cartCount">0</span>
+        </button>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="heroTitle">
+      <div class="hero-visual" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=1500&q=90" alt="Hambúrguer artesanal ilustrativo da Brasa Alta" fetchpriority="high">
+      </div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="hero-kicker"><span class="pulse-dot"></span> HAMBURGUERIA ARTESANAL • SABOR DE VERDADE</div>
+          <h1 id="heroTitle">DEU FOME?<br><span>DEU BRASA<span class="hero-period">.</span></span></h1>
+          <p>Do clássico ao bem caprichado: descubra combinações para matar a vontade de um burger do seu jeito.</p>
+          <div class="hero-actions">
+            <a href="#cardapio" class="btn btn-accent">EXPLORAR CARDÁPIO <span aria-hidden="true">↗</span></a>
+            <button type="button" class="btn btn-ghost" id="heroBuild">MONTE SEU PEDIDO <span aria-hidden="true">→</span></button>
+          </div>
+          <div class="hero-proof"><div class="proof-icons" aria-hidden="true"><span>🔥</span><span>🍔</span><span>⚡</span></div><span><strong>Burger artesanal.</strong><br>Pedido fácil e presença forte.</span></div>
+        </div>
+        <div class="hero-visual-caption" aria-hidden="true"><span>01 / 03</span><span class="caption-line"></span><strong>SUA PRÓXIMA FOME TEM ENDEREÇO.</strong></div>
+      </div>
+      <div class="hero-bottom"><div class="container hero-bottom-inner"><span>MONTE SEU PEDIDO</span><span class="star" aria-hidden="true">✳</span><span>ESCOLHA SEU FAVORITO</span><span class="star" aria-hidden="true">✳</span><span>BURGERS & SANDUÍCHES</span><span class="star" aria-hidden="true">✳</span><span>BRASA ALTA · BURGERS</span></div></div>
+    </section>
+
+    <section class="intro-band" aria-label="Diferenciais">
+      <div class="container intro-band-inner">
+        <div class="intro-message"><span class="intro-mark">BA<span>.</span></span><p>DO JEITO QUE<br>A FOME PEDE.</p></div>
+        <div class="intro-feature"><span class="feature-icon" aria-hidden="true">✳</span><div><strong>FEITO COM CAPRICHO</strong><small>Burgers artesanais e combinações únicas.</small></div></div>
+        <div class="intro-feature"><span class="feature-icon" aria-hidden="true">✳</span><div><strong>PRA TODOS OS GOSTOS</strong><small>Burgers e sanduíches tradicionais.</small></div></div>
+        <div class="intro-feature"><span class="feature-icon" aria-hidden="true">✳</span><div><strong>SEM COMPLICAÇÃO</strong><small>Escolha, personalize e confira.</small></div></div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="cardapio" aria-labelledby="menuTitle">
+      <div class="container">
+        <div class="section-topline"><span>01 — O CARDÁPIO</span><span>ESCOLHA O SEU FAVORITO</span></div>
+        <div class="section-head">
+          <div><span class="eyebrow dark">TÁ COM FOME? ENTÃO CHEGOU NO LUGAR CERTO.</span><h2 id="menuTitle">NOSSO <em>CARDÁPIO</em><span class="heading-period">.</span></h2></div>
+          <p>Escolha os favoritos, descubra um combo ou personalize seu lanche. Os itens e preços apresentados nesta prévia são ilustrativos.</p>
+        </div>
+        <div class="menu-toolbar">
+          <div class="categories" id="categories" aria-label="Filtrar produtos por categoria"></div>
+          <label class="menu-search"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.7" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="sr-only">Buscar no cardápio</span><input id="menuSearch" type="search" placeholder="Buscar no cardápio..." autocomplete="off"></label>
+        </div>
+        <div class="menu-results"><h3 id="categoryTitle">OS FAVORITOS DA BRASA</h3><span id="productCount" role="status" aria-live="polite"></span></div>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section class="combo-section" id="combos" aria-labelledby="comboTitle">
+      <div class="container">
+        <div class="section-topline dark-line"><span>02 — A COMBINAÇÃO PERFEITA</span><span>MAIS SABOR, MENOS DÚVIDA</span></div>
+        <div class="combo-head"><div><span class="eyebrow">UMA COMBINAÇÃO PRA CADA VONTADE.</span><h2 id="comboTitle">SE TEM FOME,<br><em>TEM COMBO CERTO.</em></h2><p>Hambúrguer, acompanhamento e bebida: tudo junto para quem quer matar a fome sem pensar duas vezes.</p></div><button type="button" class="btn btn-cream" data-category="combos">EXPLORAR COMBOS <span aria-hidden="true">↗</span></button></div>
+        <div class="combo-cards" id="comboHighlight"></div>
+      </div>
+    </section>
+
+    <section class="story-section" id="nossa-brasa" aria-labelledby="storyTitle">
+      <div class="container story-grid">
+        <div class="story-image"><img src="assets/brasa-alta-brand-board.webp" alt="Identidade fictícia da Brasa Alta Hamburgueria" loading="lazy"><span class="story-img-stamp">BURGER DE VERDADE<br><strong>CHAMA<br>A BRASA.</strong></span></div>
+        <div class="story-copy"><span class="eyebrow dark">03 — NOSSA HISTÓRIA</span><h2 id="storyTitle">SEU MOMENTO.<br><em>SEU BURGER.</em></h2><p class="story-lead">A Brasa Alta é uma hamburgueria fictícia criada para demonstrar uma experiência de cardápio digital premium: navegue pelos sabores, combine adicionais e simule sua escolha com facilidade.</p><div class="story-features"><div><span>01</span><div><strong>DO CLÁSSICO AO CAPRICHADO</strong><p>Explore possibilidades de hambúrgueres e sanduíches.</p></div></div><div><span>02</span><div><strong>ESCOLHA NO SEU RITMO</strong><p>Navegue pelas categorias e descubra sua combinação favorita.</p></div></div><div><span>03</span><div><strong>DO SEU JEITO</strong><p>Simule adicionais, acompanhe a sacola e confira o total.</p></div></div></div><a class="inline-link" href="#cardapio">CONHEÇA O CARDÁPIO <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="how-section" id="como-pedir" aria-labelledby="howTitle">
+      <div class="container"><div class="section-topline dark-line"><span>04 — EXPERIMENTE O MODELO</span><span>SEU PEDIDO, SEU RITMO</span></div><div class="how-head"><span class="eyebrow">DO CARDÁPIO AO RESUMO, SEM COMPLICAÇÃO.</span><h2 id="howTitle">PEDIR É <em>FÁCIL.</em></h2></div><div class="how-grid"><article><span class="step-number">01 /</span><span class="step-icon" aria-hidden="true">◉</span><h3>ESCOLHA</h3><p>Explore o cardápio e ache o burger perfeito.</p></article><article><span class="step-number">02 /</span><span class="step-icon" aria-hidden="true">＋</span><h3>PERSONALIZE</h3><p>Adicione seus extras, queijos e molhos favoritos.</p></article><article><span class="step-number">03 /</span><span class="step-icon" aria-hidden="true">▤</span><h3>CONFIRA</h3><p>Revise a sacola, quantidades e observações.</p></article><article><span class="step-number">04 /</span><span class="step-icon" aria-hidden="true">↗</span><h3>SIMULE</h3><p>Veja o resumo do pedido e copie a comanda de demonstração.</p></article></div></div>
+    </section>
+
+    <section class="last-cta" aria-label="Experimente o cardápio"><div class="container last-cta-inner"><div><span>QUE TAL ESCOLHER O PRÓXIMO FAVORITO?</span><h2>BATEU A FOME?<br><em>É HORA DE BRASA.</em></h2></div><a class="btn btn-dark" href="#cardapio">ABRIR CARDÁPIO <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+
+  <footer class="footer"><div class="container footer-main"><div><a class="brand brand-image footer-brand" href="#inicio"><span class="brand-mark logo-image-wrap" aria-hidden="true"><img src="assets/brasa-alta-logo.png" alt=""></span></a><p>Hamburgueria fictícia para demonstração.<br>Cardápio, fotos e valores ilustrativos.</p></div><div class="footer-nav"><span>EXPLORE</span><a href="#inicio">Início</a><a href="#cardapio">Cardápio</a><a href="#nossa-brasa">A casa</a><a href="#como-pedir">Como pedir</a></div><div class="footer-nav"><span>ESTE MODELO</span><a href="#cardapio">Itens ilustrativos</a><a href="#como-pedir">Simule um pedido</a><a href="#nossa-brasa">Conheça a marca</a></div><div class="footer-note"><span>BRASA ALTA.<br><em>SABOR QUE MARCA.</em></span></div></div><div class="container footer-bottom"><span>© 2026 BRASA ALTA · MARCA FICTÍCIA · DEMONSTRAÇÃO UPZEN</span><span>DESIGN & DESENVOLVIMENTO <a id="upzenLink" href="#" target="_blank" rel="noopener noreferrer">UPZEN ↗</a></span></div></footer>
+
+  <div class="modal-backdrop" id="productModal" aria-hidden="true"><div class="product-modal" role="dialog" aria-modal="true" aria-labelledby="modalName" tabindex="-1"><button class="modal-close" type="button" data-close aria-label="Fechar detalhes do produto">×</button><div class="modal-media"><img id="modalImage" src="" alt=""></div><div class="modal-body"><span class="modal-overline">MONTE DO SEU JEITO</span><span class="tag modal-tag" id="modalTag"></span><h2 id="modalName"></h2><p class="modal-description" id="modalDescription"></p><div id="customOptions"></div><div class="modal-bottom"><div><small>TOTAL DO ITEM</small><strong id="modalTotal">R$ 0,00</strong></div><button class="btn btn-accent" type="button" id="addCustomized">ADICIONAR À SACOLA <span aria-hidden="true">↗</span></button></div></div></div></div>
+
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Minha sacola" aria-hidden="true" tabindex="-1"><div class="cart-head"><div><span>SEU PEDIDO</span><h2>MINHA SACOLA<span>.</span></h2></div><button id="closeCart" type="button" aria-label="Fechar sacola">×</button></div><div class="cart-items" id="cartItems"></div><div class="cart-footer"><div class="checkout-fields"><label for="customerName">NOME</label><input id="customerName" type="text" maxlength="80" placeholder="Digite seu nome"><label for="customerAddress">ENDEREÇO DE ENTREGA</label><textarea id="customerAddress" rows="2" maxlength="220" placeholder="Rua, número, bairro, referência..."></textarea><label for="notes">OBSERVAÇÕES DO PEDIDO</label><textarea id="notes" rows="2" maxlength="500" placeholder="Ex.: sem cebola, ponto da carne..."></textarea></div><div class="total-row"><span>TOTAL DO PEDIDO</span><strong id="cartTotal">R$ 0,00</strong></div><button class="btn btn-summary" type="button" id="simulateOrder">SIMULAR PEDIDO <span aria-hidden="true">↗</span></button><small>Esta é uma demonstração. Nenhum pedido será enviado.</small></div></aside>
+
+  <div class="modal-backdrop" id="confirmModal" aria-hidden="true">
+    <div class="confirm-modal" role="dialog" aria-modal="true" aria-labelledby="confirmTitle" tabindex="-1">
+      <button class="modal-close" type="button" id="closeConfirmModal" aria-label="Fechar confirmação">×</button>
+      <div class="confirm-modal-body">
+        <span class="modal-overline">CONFIRA SUA SIMULAÇÃO</span>
+        <h2 id="confirmTitle">Tudo certo com o seu pedido<span>.</span></h2>
+        <p class="confirm-description">Revise o resumo abaixo. Você pode copiar a comanda para testar o modelo. Nenhum pedido será enviado.</p>
+        <div class="confirm-grid">
+          <div class="confirm-box">
+            <small>NOME</small>
+            <strong id="confirmCustomerName">—</strong>
+          </div>
+          <div class="confirm-box">
+            <small>ENDEREÇO</small>
+            <strong id="confirmCustomerAddress">—</strong>
+          </div>
+        </div>
+        <div class="confirm-summary">
+          <div class="confirm-summary-head">
+            <span>RESUMO DO PEDIDO</span>
+            <strong id="confirmItemCount">0 itens</strong>
+          </div>
+          <div id="confirmItems" class="confirm-items"></div>
+          <div class="confirm-notes" id="confirmNotesWrap" hidden>
+            <small>OBSERVAÇÕES</small>
+            <p id="confirmNotes"></p>
+          </div>
+        </div>
+        <div class="confirm-bottom">
+          <div>
+            <small>TOTAL ESTIMADO</small>
+            <strong id="confirmTotal">R$ 0,00</strong>
+          </div>
+          <div class="confirm-actions">
+            <button class="btn btn-dark" type="button" id="editOrderBtn">EDITAR PEDIDO</button>
+            <button class="btn btn-summary" type="button" id="copyOrderBtn">COPIAR RESUMO <span aria-hidden="true">↗</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="mobile-cart-bar" id="mobileCartBar" aria-label="Ver minha sacola"><span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 8h16l-1.5 12h-13L4 8Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 9V6a3 3 0 0 1 6 0v3" stroke="currentColor" stroke-width="1.8"/></svg><span id="mobileCartQty">0 itens</span></span><strong id="mobileCartTotal">R$ 0,00</strong><span aria-hidden="true">↗</span></button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
